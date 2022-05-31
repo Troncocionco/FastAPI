@@ -26,5 +26,13 @@ def home():
 def get_student(student_id: int):
     return students[student_id]
 
+@app.get("/get-student/{student_id}")
+def get_student(student_id: int = Path(None, description="The I
+
+
+
+D of the student you want to view", gt=0)):
+    return students[student_id]
+
 
 
